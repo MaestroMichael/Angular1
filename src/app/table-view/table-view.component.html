@@ -1,4 +1,4 @@
-<table cdk-table [dataSource]="dancers">
+<table cdk-table [dataSource]="dancers" *ngIf="dancers!=null">
     <!-- img Column -->
     <ng-container cdkColumnDef="img">
       <th cdk-header-cell *cdkHeaderCellDef> Image </th>
