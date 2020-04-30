@@ -1,0 +1,28 @@
+<table cdk-table [dataSource]="dancers">
+    <!-- img Column -->
+    <ng-container cdkColumnDef="img">
+      <th cdk-header-cell *cdkHeaderCellDef> Image </th>
+      <td cdk-cell *cdkCellDef="let element"> <img src={{element.img}}> </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="name">
+      <th cdk-header-cell *cdkHeaderCellDef> Name </th>
+      <td cdk-cell *cdkCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- possition Column -->
+    <ng-container cdkColumnDef="possition">
+      <th cdk-header-cell *cdkHeaderCellDef> Possition </th>
+      <td cdk-cell *cdkCellDef="let element"> {{element.possition}} </td>
+    </ng-container>
+  
+    <!-- company Column -->
+    <ng-container cdkColumnDef="company">
+      <th cdk-header-cell *cdkHeaderCellDef> Company </th>
+      <td cdk-cell *cdkCellDef="let element"> {{element.company}} </td>
+    </ng-container>
+  
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"(click)=onClick(row);></tr>
+  </table>

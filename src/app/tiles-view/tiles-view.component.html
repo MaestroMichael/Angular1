@@ -1,0 +1,16 @@
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let dancer of dancers" (click)=onClick(dancer);>
+      <table>
+        <tr>
+          <th><img src={{dancer.img}} width=100px; height=100px;></th>
+          <th>
+            <ul>
+              <li>{{dancer.name}}</li>
+              <li>{{dancer.possition}}</li>
+              <li>{{dancer.company}}</li>
+            </ul>
+          </th>
+        </tr>
+      </table>
+    </mat-grid-tile>
+  </mat-grid-list>

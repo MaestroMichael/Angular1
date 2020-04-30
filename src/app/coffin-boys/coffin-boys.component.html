@@ -1,0 +1,16 @@
+
+<span *ngIf ='value !=null && secondValue!=null else primary' > Information about last dancer: {{value}} and his possition is:{{secondValue}} </span>
+
+<ng-template #primary>
+    <span *ngIf ='value !=null' > Information about last dancer: {{value}}  </span>
+   </ng-template>
+<br>
+<div *ngIf= 'tableLayout'>
+    <app-table-view (DancerEmiter)="onChange($event)"></app-table-view>
+  </div>
+<div *ngIf= 'tilesLayout' >
+  <app-tiles-view (DancerEmiter)="onChange($event)"></app-tiles-view>
+</div>
+
+<button mat-raised-button (click)="loadTable();">Tabela</button>
+<button mat-raised-button (click)="loadTiles();" >Kafelki</button>
