@@ -1,7 +1,10 @@
+ul {
+    list-style: none;
+}
 tr:hover {
     background: rgb(171, 186, 187);
     
   }
-  tr:active{
+tr:active{
     background: rgb(179, 212, 171);
   }

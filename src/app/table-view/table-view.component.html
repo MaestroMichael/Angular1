@@ -1,8 +1,8 @@
 <table cdk-table [dataSource]="dancers" *ngIf="dancers!=null">
     <!-- img Column -->
-    <ng-container cdkColumnDef="img">
+    <ng-container cdkColumnDef="img" >
       <th cdk-header-cell *cdkHeaderCellDef> Image </th>
-      <td cdk-cell *cdkCellDef="let element"> <img src={{element.img}}> </td>
+      <td cdk-cell *cdkCellDef="let element"> <img src={{element.img}} class="img"> </td>
     </ng-container>
   
     <!-- Name Column -->

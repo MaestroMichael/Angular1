@@ -2,7 +2,12 @@ tr:hover {
     background: rgb(171, 186, 187);
     
   }
-  tr:active{
+tr:active{
     background: rgb(179, 212, 171);
   }
+
+img{
+    width:100px; 
+    height:100px;
+}
 
